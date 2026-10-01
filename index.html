@@ -1,0 +1,2056 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Anshika ❤️</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,body{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    background:#020006;
+}
+
+body{
+    font-family:Georgia,"Times New Roman",serif;
+    color:white;
+}
+
+#world{
+    position:relative;
+    width:100%;
+    height:100dvh;
+    overflow:hidden;
+    background:
+    radial-gradient(
+        ellipse at 50% 75%,
+        rgba(255,20,110,.23),
+        rgba(80,5,70,.20) 32%,
+        rgba(15,2,25,.65) 65%,
+        #010003 100%
+    );
+}
+
+/* ================= BACKGROUND ================= */
+
+.glow{
+    position:absolute;
+    border-radius:50%;
+    pointer-events:none;
+    filter:blur(90px);
+}
+
+.g1{
+    width:55vw;
+    height:55vw;
+    left:-20vw;
+    top:20%;
+    background:rgba(255,20,110,.13);
+    animation:g1 12s ease-in-out infinite alternate;
+}
+
+.g2{
+    width:45vw;
+    height:45vw;
+    right:-18vw;
+    bottom:-10%;
+    background:rgba(100,30,255,.14);
+    animation:g2 15s ease-in-out infinite alternate;
+}
+
+.g3{
+    width:30vw;
+    height:30vw;
+    left:35%;
+    top:30%;
+    background:rgba(255,60,160,.10);
+    animation:g3 8s ease-in-out infinite alternate;
+}
+
+@keyframes g1{
+    to{transform:translate(15vw,-8vh) scale(1.25)}
+}
+
+@keyframes g2{
+    to{transform:translate(-12vw,-7vh) scale(.75)}
+}
+
+@keyframes g3{
+    to{transform:translate(6vw,-5vh) scale(1.3)}
+}
+
+/* ================= STARS ================= */
+
+#stars{
+    position:absolute;
+    inset:0;
+}
+
+.star{
+    position:absolute;
+    width:2px;
+    height:2px;
+    border-radius:50%;
+    background:#fff;
+    box-shadow:
+    0 0 5px #fff,
+    0 0 14px rgba(255,130,190,.9);
+
+    animation:
+    starPulse var(--duration)
+    var(--delay)
+    ease-in-out infinite;
+}
+
+@keyframes starPulse{
+    0%,100%{
+        opacity:.1;
+        transform:scale(.4);
+    }
+
+    50%{
+        opacity:1;
+        transform:scale(1.8);
+    }
+}
+
+/* ================= SHOOTING STARS ================= */
+
+.shooting{
+    position:absolute;
+    width:110px;
+    height:2px;
+
+    background:
+    linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.8),
+        white
+    );
+
+    transform:rotate(-35deg);
+
+    filter:
+    drop-shadow(0 0 6px white)
+    drop-shadow(0 0 12px #ff82b0);
+
+    opacity:0;
+
+    animation:shoot 7s linear infinite;
+}
+
+.s1{
+    top:18%;
+    left:-15%;
+    animation-delay:2s;
+}
+
+.s2{
+    top:30%;
+    left:-20%;
+    animation-delay:5s;
+}
+
+@keyframes shoot{
+
+    0%{
+        transform:
+        translate(0,0)
+        rotate(-35deg);
+        opacity:0;
+    }
+
+    5%{
+        opacity:1;
+    }
+
+    18%{
+        transform:
+        translate(130vw,70vh)
+        rotate(-35deg);
+        opacity:0;
+    }
+
+    100%{
+        opacity:0;
+    }
+}
+
+/* ================= MOON ================= */
+
+.moon{
+    position:absolute;
+
+    top:7%;
+    right:8%;
+
+    width:75px;
+    height:75px;
+
+    border-radius:50%;
+
+    background:
+    radial-gradient(
+        circle at 35% 30%,
+        #fff,
+        #ffdce9 42%,
+        #ff9fc2 75%,
+        rgba(255,80,150,.2)
+    );
+
+    box-shadow:
+    0 0 20px rgba(255,220,235,.75),
+    0 0 70px rgba(255,80,150,.35);
+
+    opacity:.7;
+
+    animation:
+    moonPulse 5s ease-in-out infinite;
+}
+
+@keyframes moonPulse{
+
+    50%{
+        box-shadow:
+        0 0 30px rgba(255,220,235,.9),
+        0 0 100px rgba(255,80,150,.5);
+    }
+}
+
+/* ================= TITLE ================= */
+
+.top-text{
+    position:absolute;
+    z-index:50;
+
+    top:7%;
+    left:50%;
+
+    width:100%;
+
+    text-align:center;
+
+    transform:translateX(-50%);
+
+    opacity:0;
+
+    animation:
+    titleIn 2s 1s
+    cubic-bezier(.16,1,.3,1)
+    forwards;
+}
+
+.top-small{
+    display:block;
+
+    font-family:Arial,sans-serif;
+
+    font-size:10px;
+    letter-spacing:7px;
+
+    color:rgba(255,220,235,.6);
+
+    margin-bottom:8px;
+}
+
+.top-name{
+
+    font-size:clamp(48px,8vw,85px);
+
+    font-weight:400;
+
+    letter-spacing:5px;
+
+    background:
+    linear-gradient(
+        90deg,
+        #fff,
+        #ff91b9,
+        #fff,
+        #ff4d88,
+        #fff
+    );
+
+    background-size:300% auto;
+
+    -webkit-background-clip:text;
+    background-clip:text;
+
+    color:transparent;
+
+    animation:
+    shimmer 5s linear infinite;
+
+    filter:
+    drop-shadow(0 0 20px rgba(255,50,130,.5));
+}
+
+@keyframes titleIn{
+
+    from{
+        opacity:0;
+        transform:
+        translate(-50%,30px);
+        filter:blur(15px);
+    }
+
+    to{
+        opacity:1;
+        transform:
+        translate(-50%,0);
+        filter:blur(0);
+    }
+}
+
+@keyframes shimmer{
+    to{
+        background-position:300% center;
+    }
+}
+
+/* =========================================================
+   FLOATING ROMANTIC WORDS
+========================================================= */
+
+#words{
+    position:absolute;
+    inset:0;
+
+    z-index:18;
+
+    pointer-events:none;
+}
+
+.word{
+    position:absolute;
+
+    white-space:nowrap;
+
+    font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+    font-style:italic;
+
+    font-size:
+    clamp(12px,1.5vw,18px);
+
+    letter-spacing:1.5px;
+
+    color:rgba(255,210,228,.72);
+
+    text-shadow:
+    0 0 8px rgba(255,70,130,.8),
+    0 0 20px rgba(255,50,130,.35);
+
+    opacity:0;
+
+    animation:
+    wordFloat var(--duration)
+    var(--delay)
+    ease-in-out infinite;
+}
+
+/* different side positions */
+
+.w1{
+    left:5%;
+    top:34%;
+}
+
+.w2{
+    right:5%;
+    top:39%;
+}
+
+.w3{
+    left:7%;
+    top:54%;
+}
+
+.w4{
+    right:6%;
+    top:58%;
+}
+
+.w5{
+    left:3%;
+    top:70%;
+}
+
+.w6{
+    right:4%;
+    top:72%;
+}
+
+.w7{
+    left:13%;
+    top:24%;
+}
+
+.w8{
+    right:12%;
+    top:25%;
+}
+
+@keyframes wordFloat{
+
+    0%{
+        opacity:0;
+        transform:
+        translateY(20px)
+        translateX(0)
+        scale(.8);
+        filter:blur(5px);
+    }
+
+    18%{
+        opacity:.78;
+        filter:blur(0);
+    }
+
+    50%{
+        opacity:.55;
+        transform:
+        translateY(-20px)
+        translateX(var(--move))
+        scale(1);
+    }
+
+    78%{
+        opacity:.72;
+    }
+
+    100%{
+        opacity:0;
+        transform:
+        translateY(-60px)
+        translateX(calc(var(--move) * -1))
+        scale(.9);
+        filter:blur(3px);
+    }
+}
+
+/* ================= GARDEN ================= */
+
+.garden{
+    position:absolute;
+
+    left:50%;
+    bottom:-5px;
+
+    width:min(900px,95vw);
+    height:min(62vh,540px);
+
+    transform:translateX(-50%);
+
+    z-index:10;
+}
+
+.ground{
+    position:absolute;
+
+    left:50%;
+    bottom:-110px;
+
+    width:125%;
+    height:230px;
+
+    transform:translateX(-50%);
+
+    border-radius:50%;
+
+    background:
+    radial-gradient(
+        ellipse,
+        rgba(30,150,75,.35),
+        rgba(10,50,25,.2) 45%,
+        transparent 72%
+    );
+
+    filter:blur(6px);
+}
+
+.groundGlow{
+    position:absolute;
+
+    left:50%;
+    bottom:15px;
+
+    width:650px;
+    height:160px;
+
+    transform:translateX(-50%);
+
+    border-radius:50%;
+
+    background:
+    radial-gradient(
+        ellipse,
+        rgba(255,25,110,.18),
+        transparent 70%
+    );
+
+    filter:blur(25px);
+
+    animation:
+    groundPulse 4s ease-in-out infinite;
+}
+
+@keyframes groundPulse{
+
+    50%{
+        transform:
+        translateX(-50%)
+        scale(1.12);
+
+        opacity:.7;
+    }
+}
+
+/* ================= GRASS ================= */
+
+.grass{
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+
+    height:120px;
+}
+
+.blade{
+    position:absolute;
+
+    bottom:0;
+
+    width:3px;
+    height:var(--height);
+
+    border-radius:100% 0 100% 0;
+
+    background:
+    linear-gradient(
+        to top,
+        #031b0e,
+        #0b7135,
+        #48e88a
+    );
+
+    transform-origin:bottom center;
+
+    animation:
+    bladeGrow 1.4s var(--delay)
+    cubic-bezier(.16,1,.3,1)
+    both,
+    bladeWind 4s var(--wind)
+    ease-in-out infinite;
+}
+
+@keyframes bladeGrow{
+
+    from{
+        transform:
+        scaleY(0)
+        rotate(-15deg);
+    }
+
+    to{
+        transform:
+        scaleY(1)
+        rotate(var(--rotation));
+    }
+}
+
+@keyframes bladeWind{
+
+    0%,100%{
+        rotate:-2deg;
+    }
+
+    50%{
+        rotate:4deg;
+    }
+}
+
+/* ================= FLOWERS ================= */
+
+.flower{
+    position:absolute;
+
+    bottom:28px;
+
+    width:120px;
+    height:100%;
+
+    transform:
+    translateX(-50%)
+    scale(var(--scale));
+
+    transform-origin:bottom center;
+
+    animation:
+    sway var(--sway)
+    var(--swayDelay)
+    ease-in-out infinite;
+
+    z-index:var(--z);
+}
+
+.f1{left:8%}
+.f2{left:23%}
+.f3{left:37%}
+.f4{left:50%}
+.f5{left:63%}
+.f6{left:77%}
+.f7{left:92%}
+
+@keyframes sway{
+
+    0%,100%{
+        rotate:-1.5deg;
+    }
+
+    50%{
+        rotate:2.5deg;
+    }
+}
+
+/* ================= STEM ================= */
+
+.stem{
+    position:absolute;
+
+    left:50%;
+    bottom:0;
+
+    width:5px;
+    height:var(--stem);
+
+    transform:
+    translateX(-50%)
+    scaleY(0);
+
+    transform-origin:bottom;
+
+    border-radius:20px;
+
+    background:
+    linear-gradient(
+        90deg,
+        #032714,
+        #37d878,
+        #087637
+    );
+
+    box-shadow:
+    0 0 12px rgba(30,220,100,.3);
+
+    animation:
+    stemGrow 1.8s var(--delay)
+    cubic-bezier(.16,1,.3,1)
+    forwards;
+}
+
+@keyframes stemGrow{
+
+    to{
+        transform:
+        translateX(-50%)
+        scaleY(1);
+    }
+}
+
+/* ================= LEAVES ================= */
+
+.leaf{
+    position:absolute;
+
+    width:58px;
+    height:28px;
+
+    border-radius:100% 0 100% 0;
+
+    background:
+    linear-gradient(
+        135deg,
+        #63f39a,
+        #087b38
+    );
+
+    opacity:0;
+}
+
+.leaf.left{
+    right:50%;
+    bottom:43%;
+
+    transform:
+    rotate(-28deg)
+    scale(0);
+
+    transform-origin:right center;
+
+    animation:
+    leafIn 1.1s
+    calc(var(--delay) + .8s)
+    cubic-bezier(.16,1,.3,1)
+    forwards;
+}
+
+.leaf.right{
+    left:50%;
+    bottom:60%;
+
+    transform:
+    rotate(28deg)
+    scale(0);
+
+    transform-origin:left center;
+
+    animation:
+    leafIn 1.1s
+    calc(var(--delay) + 1s)
+    cubic-bezier(.16,1,.3,1)
+    forwards;
+}
+
+@keyframes leafIn{
+
+    to{
+        opacity:1;
+
+        transform:
+        rotate(var(--angle))
+        scale(1);
+    }
+}
+
+/* ================= FLOWER HEAD ================= */
+
+.flowerHead{
+    position:absolute;
+
+    left:50%;
+
+    bottom:
+    calc(var(--stem) - 15px);
+
+    width:120px;
+    height:120px;
+
+    transform:
+    translateX(-50%)
+    scale(0);
+
+    animation:
+    bloom 1.5s
+    calc(var(--delay) + 1s)
+    cubic-bezier(.16,1,.3,1)
+    forwards;
+}
+
+@keyframes bloom{
+
+    0%{
+        opacity:0;
+
+        transform:
+        translateX(-50%)
+        scale(0)
+        rotate(-30deg);
+    }
+
+    65%{
+        opacity:1;
+
+        transform:
+        translateX(-50%)
+        scale(1.12)
+        rotate(8deg);
+    }
+
+    100%{
+        opacity:1;
+
+        transform:
+        translateX(-50%)
+        scale(1)
+        rotate(0);
+    }
+}
+
+/* ================= PETALS ================= */
+
+.petal{
+    position:absolute;
+
+    left:50%;
+    top:50%;
+
+    width:39px;
+    height:61px;
+
+    border-radius:
+    75% 75% 45% 45%;
+
+    transform-origin:50% 90%;
+
+    transform:
+    translate(-50%,-90%)
+    rotate(var(--angle))
+    translateY(-20px)
+    scale(0);
+
+    background:
+    radial-gradient(
+        ellipse at 50% 15%,
+        #fff4f8 0%,
+        #ffb0ca 23%,
+        #f13d79 58%,
+        #890b42 100%
+    );
+
+    box-shadow:
+    inset 0 -8px 15px rgba(80,0,30,.28),
+    0 0 14px rgba(255,55,125,.28);
+
+    animation:
+    petalIn 1.15s
+    var(--petalDelay)
+    cubic-bezier(.16,1,.3,1)
+    forwards;
+}
+
+@keyframes petalIn{
+
+    0%{
+        transform:
+        translate(-50%,-90%)
+        rotate(var(--angle))
+        translateY(-3px)
+        scale(0);
+    }
+
+    70%{
+        transform:
+        translate(-50%,-90%)
+        rotate(var(--angle))
+        translateY(-24px)
+        scale(1.1);
+    }
+
+    100%{
+        transform:
+        translate(-50%,-90%)
+        rotate(var(--angle))
+        translateY(-20px)
+        scale(1);
+    }
+}
+
+/* ================= CORE ================= */
+
+.core{
+    position:absolute;
+
+    left:50%;
+    top:50%;
+
+    width:35px;
+    height:35px;
+
+    transform:
+    translate(-50%,-50%)
+    scale(0);
+
+    border-radius:50%;
+
+    background:
+    radial-gradient(
+        circle at 35% 30%,
+        #fff9bd,
+        #ffd044 35%,
+        #d16c00 80%
+    );
+
+    box-shadow:
+    0 0 15px #ffd044,
+    0 0 35px rgba(255,195,50,.75);
+
+    z-index:20;
+
+    animation:
+    coreIn 1s var(--coreDelay)
+    cubic-bezier(.16,1,.3,1)
+    forwards;
+}
+
+@keyframes coreIn{
+
+    to{
+        transform:
+        translate(-50%,-50%)
+        scale(1);
+    }
+}
+
+.coreHeart{
+    position:absolute;
+
+    left:50%;
+    top:50%;
+
+    transform:
+    translate(-50%,-50%);
+
+    color:#ff1659;
+
+    font-family:Arial,sans-serif;
+
+    font-size:15px;
+
+    text-shadow:
+    0 0 8px #ff1659,
+    0 0 20px #ff1659;
+
+    animation:
+    heartBeat 1.15s ease-in-out infinite;
+}
+
+@keyframes heartBeat{
+
+    0%,100%{
+        transform:
+        translate(-50%,-50%)
+        scale(1);
+    }
+
+    50%{
+        transform:
+        translate(-50%,-50%)
+        scale(1.3);
+    }
+}
+
+/* ================= HEART PARTICLES ================= */
+
+#heartField{
+    position:absolute;
+    inset:0;
+
+    pointer-events:none;
+
+    z-index:25;
+}
+
+.heart{
+    position:absolute;
+
+    color:#ff4380;
+
+    font-family:Arial,sans-serif;
+
+    font-size:var(--size);
+
+    text-shadow:
+    0 0 8px #ff4380,
+    0 0 20px rgba(255,50,120,.7);
+
+    opacity:0;
+
+    animation:
+    floatHeart var(--time)
+    var(--delay)
+    ease-in-out infinite;
+}
+
+@keyframes floatHeart{
+
+    0%{
+        opacity:0;
+
+        transform:
+        translateY(30px)
+        scale(.4)
+        rotate(-10deg);
+    }
+
+    20%{
+        opacity:.8;
+    }
+
+    65%{
+        opacity:.5;
+    }
+
+    100%{
+        opacity:0;
+
+        transform:
+        translateY(-280px)
+        scale(1)
+        rotate(12deg);
+    }
+}
+
+/* ================= POLLEN ================= */
+
+#pollen{
+    position:absolute;
+    inset:0;
+
+    pointer-events:none;
+
+    z-index:22;
+}
+
+.particle{
+    position:absolute;
+
+    width:3px;
+    height:3px;
+
+    border-radius:50%;
+
+    background:#ffd9e6;
+
+    box-shadow:
+    0 0 7px white,
+    0 0 15px #ff5f99;
+
+    animation:
+    pollenFloat var(--time)
+    var(--delay)
+    ease-in-out infinite;
+}
+
+@keyframes pollenFloat{
+
+    0%{
+        opacity:0;
+
+        transform:
+        translate(0,30px)
+        scale(.3);
+    }
+
+    25%{
+        opacity:1;
+    }
+
+    75%{
+        opacity:.7;
+    }
+
+    100%{
+        opacity:0;
+
+        transform:
+        translate(var(--x),var(--y))
+        scale(1.2);
+    }
+}
+
+/* ================= BUTTERFLIES ================= */
+
+#butterflies{
+    position:absolute;
+    inset:0;
+
+    pointer-events:none;
+
+    z-index:30;
+}
+
+.butterfly{
+    position:absolute;
+
+    font-size:22px;
+
+    color:#ff9ec0;
+
+    text-shadow:
+    0 0 10px #ff4f8c,
+    0 0 25px rgba(255,60,130,.7);
+
+    opacity:0;
+
+    animation:
+    butterflyFly var(--time)
+    var(--delay)
+    ease-in-out infinite;
+}
+
+@keyframes butterflyFly{
+
+    0%{
+        opacity:0;
+
+        transform:
+        translate(0,40px)
+        scale(.5)
+        rotate(-15deg);
+    }
+
+    20%{
+        opacity:.9;
+    }
+
+    60%{
+        transform:
+        translate(var(--x),var(--y))
+        scale(1)
+        rotate(10deg);
+    }
+
+    100%{
+        opacity:0;
+
+        transform:
+        translate(var(--x2),var(--y2))
+        scale(.5)
+        rotate(-12deg);
+    }
+}
+
+/* ================= FINAL MESSAGE ================= */
+
+.final{
+    position:absolute;
+
+    z-index:55;
+
+    left:50%;
+    bottom:4%;
+
+    transform:
+    translateX(-50%)
+    translateY(25px);
+
+    text-align:center;
+
+    opacity:0;
+
+    animation:
+    finalIn 2s 5s
+    cubic-bezier(.16,1,.3,1)
+    forwards;
+}
+
+.finalTitle{
+
+    font-family:Arial,sans-serif;
+
+    font-size:
+    clamp(14px,2.2vw,23px);
+
+    letter-spacing:7px;
+
+    white-space:nowrap;
+}
+
+.finalTitle span{
+
+    color:#ff3b77;
+
+    text-shadow:
+    0 0 10px #ff3b77,
+    0 0 25px #ff3b77,
+    0 0 50px rgba(255,50,120,.65);
+
+    animation:
+    loveGlow 1.7s ease-in-out infinite;
+}
+
+@keyframes loveGlow{
+
+    50%{
+        text-shadow:
+        0 0 20px #ff3b77,
+        0 0 45px #ff3b77,
+        0 0 80px rgba(255,50,120,.8);
+    }
+}
+
+.signature{
+
+    margin-top:10px;
+
+    font-size:17px;
+
+    letter-spacing:3px;
+
+    color:rgba(255,220,233,.8);
+}
+
+@keyframes finalIn{
+
+    from{
+        opacity:0;
+
+        transform:
+        translateX(-50%)
+        translateY(25px);
+
+        filter:blur(12px);
+    }
+
+    to{
+        opacity:1;
+
+        transform:
+        translateX(-50%)
+        translateY(0);
+
+        filter:blur(0);
+    }
+}
+
+/* ================= MAGIC RINGS ================= */
+
+.magicRing{
+
+    position:absolute;
+
+    left:50%;
+    bottom:150px;
+
+    width:100px;
+    height:100px;
+
+    transform:
+    translate(-50%,50%)
+    scale(.3);
+
+    border:
+    1px solid rgba(255,80,145,.35);
+
+    border-radius:50%;
+
+    opacity:0;
+
+    pointer-events:none;
+
+    z-index:8;
+
+    animation:
+    ringExpand 5s ease-out infinite;
+}
+
+.r2{
+    animation-delay:1.7s;
+}
+
+.r3{
+    animation-delay:3.4s;
+}
+
+@keyframes ringExpand{
+
+    0%{
+        opacity:0;
+
+        transform:
+        translate(-50%,50%)
+        scale(.3);
+    }
+
+    15%{
+        opacity:.7;
+    }
+
+    100%{
+        opacity:0;
+
+        transform:
+        translate(-50%,50%)
+        scale(5);
+    }
+}
+
+/* ================= RIPPLE ================= */
+
+.ripple{
+
+    position:fixed;
+
+    width:20px;
+    height:20px;
+
+    border-radius:50%;
+
+    border:
+    1px solid rgba(255,130,175,.9);
+
+    pointer-events:none;
+
+    z-index:100;
+
+    transform:
+    translate(-50%,-50%)
+    scale(0);
+
+    animation:
+    ripple 1s ease-out forwards;
+}
+
+@keyframes ripple{
+
+    to{
+        transform:
+        translate(-50%,-50%)
+        scale(12);
+
+        opacity:0;
+    }
+}
+
+/* ================= VIGNETTE ================= */
+
+.vignette{
+
+    position:absolute;
+
+    inset:0;
+
+    pointer-events:none;
+
+    z-index:70;
+
+    background:
+    radial-gradient(
+        ellipse at center,
+        transparent 42%,
+        rgba(0,0,0,.48) 100%
+    );
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:700px){
+
+    .moon{
+        width:55px;
+        height:55px;
+        right:7%;
+    }
+
+    .top-text{
+        top:8%;
+    }
+
+    .top-name{
+        font-size:47px;
+    }
+
+    .garden{
+        width:105vw;
+        height:min(54vh,430px);
+    }
+
+    .final{
+        bottom:4%;
+    }
+
+    .finalTitle{
+        font-size:11px;
+        letter-spacing:4px;
+    }
+
+    .signature{
+        font-size:13px;
+    }
+
+    .butterfly{
+        font-size:17px;
+    }
+
+    .word{
+        font-size:11px;
+        letter-spacing:1px;
+    }
+
+    .w1{left:2%}
+    .w2{right:2%}
+    .w3{left:2%}
+    .w4{right:2%}
+    .w5{left:1%}
+    .w6{right:1%}
+    .w7{left:4%}
+    .w8{right:4%}
+}
+
+@media(max-height:620px){
+
+    .top-text{
+        top:3%;
+    }
+
+    .garden{
+        height:55vh;
+    }
+
+    .final{
+        bottom:2%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div id="world">
+
+    <div class="glow g1"></div>
+    <div class="glow g2"></div>
+    <div class="glow g3"></div>
+
+    <div class="moon"></div>
+
+    <div class="shooting s1"></div>
+    <div class="shooting s2"></div>
+
+    <div id="stars"></div>
+
+
+    <!-- ================================================
+         FLOATING LOVE WORDS
+    ================================================= -->
+
+    <div id="words">
+
+        <div class="word w1"
+             style="--duration:8s;--delay:0s;--move:18px;">
+            I'm lucky to have you
+        </div>
+
+        <div class="word w2"
+             style="--duration:9s;--delay:2s;--move:-20px;">
+            You mean so much to me
+        </div>
+
+        <div class="word w3"
+             style="--duration:10s;--delay:4s;--move:25px;">
+            My favorite person ❤️
+        </div>
+
+        <div class="word w4"
+             style="--duration:9s;--delay:1s;--move:-18px;">
+            You make my world brighter
+        </div>
+
+        <div class="word w5"
+             style="--duration:11s;--delay:3s;--move:22px;">
+            Always you
+        </div>
+
+        <div class="word w6"
+             style="--duration:10s;--delay:5s;--move:-25px;">
+            My heart chose you
+        </div>
+
+        <div class="word w7"
+             style="--duration:9s;--delay:6s;--move:18px;">
+            Grateful for you
+        </div>
+
+        <div class="word w8"
+             style="--duration:11s;--delay:7s;--move:-20px;">
+            You are special to me
+        </div>
+
+    </div>
+
+
+    <div id="pollen"></div>
+    <div id="butterflies"></div>
+    <div id="heartField"></div>
+
+
+    <!-- TITLE -->
+
+    <div class="top-text">
+
+        <span class="top-small">
+            something I made just for you
+        </span>
+
+        <div class="top-name">
+            Anshika
+        </div>
+
+    </div>
+
+
+    <!-- MAGIC RINGS -->
+
+    <div class="magicRing"></div>
+    <div class="magicRing r2"></div>
+    <div class="magicRing r3"></div>
+
+
+    <!-- FLOWER GARDEN -->
+
+    <div class="garden" id="garden">
+
+        <div class="ground"></div>
+        <div class="groundGlow"></div>
+
+        <div class="grass" id="grass"></div>
+
+
+        <div class="flower f1"
+             style="
+             --scale:.55;
+             --stem:170px;
+             --delay:.2s;
+             --sway:5.5s;
+             --swayDelay:-1s;
+             --z:3;">
+        </div>
+
+        <div class="flower f2"
+             style="
+             --scale:.70;
+             --stem:205px;
+             --delay:.5s;
+             --sway:6s;
+             --swayDelay:-2s;
+             --z:4;">
+        </div>
+
+        <div class="flower f3"
+             style="
+             --scale:.52;
+             --stem:155px;
+             --delay:.35s;
+             --sway:5s;
+             --swayDelay:-3s;
+             --z:3;">
+        </div>
+
+        <div class="flower f4"
+             style="
+             --scale:1.18;
+             --stem:265px;
+             --delay:0s;
+             --sway:6.5s;
+             --swayDelay:-1.5s;
+             --z:10;">
+        </div>
+
+        <div class="flower f5"
+             style="
+             --scale:.54;
+             --stem:160px;
+             --delay:.7s;
+             --sway:5.2s;
+             --swayDelay:-2.5s;
+             --z:3;">
+        </div>
+
+        <div class="flower f6"
+             style="
+             --scale:.70;
+             --stem:205px;
+             --delay:.8s;
+             --sway:5.8s;
+             --swayDelay:-4s;
+             --z:4;">
+        </div>
+
+        <div class="flower f7"
+             style="
+             --scale:.57;
+             --stem:175px;
+             --delay:.45s;
+             --sway:4.8s;
+             --swayDelay:-3.5s;
+             --z:3;">
+        </div>
+
+    </div>
+
+
+    <!-- FINAL -->
+
+    <div class="final">
+
+        <div class="finalTitle">
+            I <span>LOVE</span> YOU
+        </div>
+
+        <div class="signature">
+            — Ayush ❤️
+        </div>
+
+    </div>
+
+
+    <div class="vignette"></div>
+
+</div>
+
+
+<script>
+
+/* =====================================================
+   STARS
+===================================================== */
+
+const stars =
+document.getElementById("stars");
+
+for(let i=0;i<140;i++){
+
+    const star =
+    document.createElement("span");
+
+    star.className="star";
+
+    star.style.left =
+    Math.random()*100+"%";
+
+    star.style.top =
+    Math.random()*78+"%";
+
+    star.style.setProperty(
+        "--duration",
+        2+Math.random()*4+"s"
+    );
+
+    star.style.setProperty(
+        "--delay",
+        -Math.random()*6+"s"
+    );
+
+    stars.appendChild(star);
+}
+
+
+/* =====================================================
+   GRASS
+===================================================== */
+
+const grass =
+document.getElementById("grass");
+
+for(let i=0;i<110;i++){
+
+    const blade =
+    document.createElement("i");
+
+    blade.className="blade";
+
+    blade.style.left =
+    Math.random()*100+"%";
+
+    blade.style.setProperty(
+        "--height",
+        35+Math.random()*85+"px"
+    );
+
+    blade.style.setProperty(
+        "--delay",
+        Math.random()*1.8+"s"
+    );
+
+    blade.style.setProperty(
+        "--wind",
+        -Math.random()*4+"s"
+    );
+
+    blade.style.setProperty(
+        "--rotation",
+        -8+Math.random()*16+"deg"
+    );
+
+    grass.appendChild(blade);
+}
+
+
+/* =====================================================
+   FLOWERS
+===================================================== */
+
+const flowers =
+document.querySelectorAll(".flower");
+
+flowers.forEach(function(flower){
+
+    const delay =
+    parseFloat(
+        getComputedStyle(flower)
+        .getPropertyValue("--delay")
+    ) || 0;
+
+
+    const stem =
+    document.createElement("div");
+
+    stem.className="stem";
+
+    flower.appendChild(stem);
+
+
+    const leftLeaf =
+    document.createElement("div");
+
+    leftLeaf.className="leaf left";
+
+    leftLeaf.style.setProperty(
+        "--angle",
+        "-28deg"
+    );
+
+    flower.appendChild(leftLeaf);
+
+
+    const rightLeaf =
+    document.createElement("div");
+
+    rightLeaf.className="leaf right";
+
+    rightLeaf.style.setProperty(
+        "--angle",
+        "28deg"
+    );
+
+    flower.appendChild(rightLeaf);
+
+
+    const head =
+    document.createElement("div");
+
+    head.className="flowerHead";
+
+    flower.appendChild(head);
+
+
+    const main =
+    flower.classList.contains("f4");
+
+    const count =
+    main ? 14 : 10;
+
+
+    for(let i=0;i<count;i++){
+
+        const petal =
+        document.createElement("div");
+
+        petal.className="petal";
+
+        petal.style.setProperty(
+            "--angle",
+            (360/count)*i+"deg"
+        );
+
+        petal.style.setProperty(
+            "--petalDelay",
+            delay+1+i*.06+"s"
+        );
+
+        head.appendChild(petal);
+    }
+
+
+    const core =
+    document.createElement("div");
+
+    core.className="core";
+
+    core.style.setProperty(
+        "--coreDelay",
+        delay+1.9+"s"
+    );
+
+    head.appendChild(core);
+
+
+    if(main){
+
+        const heart =
+        document.createElement("div");
+
+        heart.className="coreHeart";
+
+        heart.textContent="♥";
+
+        core.appendChild(heart);
+    }
+
+});
+
+
+/* =====================================================
+   FLOATING HEARTS
+===================================================== */
+
+const heartField =
+document.getElementById("heartField");
+
+function createHeart(){
+
+    const heart =
+    document.createElement("span");
+
+    heart.className="heart";
+
+    heart.textContent="♥";
+
+    heart.style.left =
+    15+Math.random()*70+"%";
+
+    heart.style.top =
+    48+Math.random()*38+"%";
+
+    heart.style.setProperty(
+        "--size",
+        7+Math.random()*13+"px"
+    );
+
+    heart.style.setProperty(
+        "--time",
+        4+Math.random()*4+"s"
+    );
+
+    heartField.appendChild(heart);
+
+    setTimeout(
+        ()=>heart.remove(),
+        8500
+    );
+}
+
+for(let i=0;i<30;i++){
+
+    const heart =
+    document.createElement("span");
+
+    heart.className="heart";
+
+    heart.textContent="♥";
+
+    heart.style.left =
+    10+Math.random()*80+"%";
+
+    heart.style.top =
+    45+Math.random()*45+"%";
+
+    heart.style.setProperty(
+        "--size",
+        7+Math.random()*13+"px"
+    );
+
+    heart.style.setProperty(
+        "--time",
+        5+Math.random()*5+"s"
+    );
+
+    heart.style.setProperty(
+        "--delay",
+        -Math.random()*8+"s"
+    );
+
+    heartField.appendChild(heart);
+}
+
+setInterval(createHeart,1100);
+
+
+/* =====================================================
+   POLLEN
+===================================================== */
+
+const pollen =
+document.getElementById("pollen");
+
+for(let i=0;i<45;i++){
+
+    const p =
+    document.createElement("span");
+
+    p.className="particle";
+
+    p.style.left =
+    20+Math.random()*60+"%";
+
+    p.style.top =
+    45+Math.random()*40+"%";
+
+    p.style.setProperty(
+        "--x",
+        -100+Math.random()*200+"px"
+    );
+
+    p.style.setProperty(
+        "--y",
+        -100-Math.random()*180+"px"
+    );
+
+    p.style.setProperty(
+        "--time",
+        4+Math.random()*5+"s"
+    );
+
+    p.style.setProperty(
+        "--delay",
+        -Math.random()*7+"s"
+    );
+
+    pollen.appendChild(p);
+}
+
+
+/* =====================================================
+   BUTTERFLIES
+===================================================== */
+
+const butterflies =
+document.getElementById("butterflies");
+
+for(let i=0;i<6;i++){
+
+    const b =
+    document.createElement("span");
+
+    b.className="butterfly";
+
+    b.textContent="🦋";
+
+    b.style.left =
+    10+Math.random()*80+"%";
+
+    b.style.top =
+    35+Math.random()*45+"%";
+
+    b.style.setProperty(
+        "--x",
+        -100+Math.random()*200+"px"
+    );
+
+    b.style.setProperty(
+        "--y",
+        -100+Math.random()*100+"px"
+    );
+
+    b.style.setProperty(
+        "--x2",
+        -180+Math.random()*360+"px"
+    );
+
+    b.style.setProperty(
+        "--y2",
+        -180+Math.random()*100+"px"
+    );
+
+    b.style.setProperty(
+        "--time",
+        9+Math.random()*7+"s"
+    );
+
+    b.style.setProperty(
+        "--delay",
+        -Math.random()*12+"s"
+    );
+
+    butterflies.appendChild(b);
+}
+
+
+/* =====================================================
+   MOUSE PARALLAX
+===================================================== */
+
+const garden =
+document.getElementById("garden");
+
+let mouseX=0;
+let mouseY=0;
+
+let currentX=0;
+let currentY=0;
+
+window.addEventListener(
+"mousemove",
+function(e){
+
+    mouseX=
+    (
+        e.clientX/
+        window.innerWidth-
+        .5
+    )*12;
+
+    mouseY=
+    (
+        e.clientY/
+        window.innerHeight-
+        .5
+    )*6;
+});
+
+function parallax(){
+
+    currentX+=
+    (mouseX-currentX)*.035;
+
+    currentY+=
+    (mouseY-currentY)*.035;
+
+    if(window.innerWidth>700){
+
+        garden.style.transform=
+        `translateX(calc(-50% + ${currentX}px))
+         translateY(${currentY}px)`;
+    }
+
+    requestAnimationFrame(parallax);
+}
+
+parallax();
+
+
+/* =====================================================
+   CLICK RIPPLE
+===================================================== */
+
+window.addEventListener(
+"click",
+function(e){
+
+    const ripple =
+    document.createElement("div");
+
+    ripple.className="ripple";
+
+    ripple.style.left=
+    e.clientX+"px";
+
+    ripple.style.top=
+    e.clientY+"px";
+
+    document.body.appendChild(ripple);
+
+    setTimeout(
+        ()=>ripple.remove(),
+        1000
+    );
+});
+
+</script>
+
+</body>
+</html>
